@@ -1,0 +1,98 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QSM - Certificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-22 09:24+0000\n"
+"PO-Revision-Date: 2021-01-22 09:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: qsm-certificate"
+
+#. Description of the plugin
+msgid "Adds the ability to give certificates to quiz/survey takers"
+msgstr "Dodaje możliwość wystawiania certyfikatów przystępującym do quizu/ankiety"
+
+#: php/quiz-settings-tab-content.php:92
+msgid ""
+"After enabling and configuring your certificate, you will have to add it to "
+"an email on the Emails tab or a results page on the Results Page tab using "
+"the %CERTIFICATE_LINK% variable."
+msgstr "Po włączeniu i ustawieniu certyfikatu powinieneś dodać zmienną %CERTIFICATE_LINK% do treści wiadomości email lub na stronie z wynikami."
+
+#: php/quiz-settings-tab-content.php:141
+msgid "Allowed tags: &lt;b&gt; - bold, &lt;i&gt; - italics, &lt;u&gt; - underline, &lt;br&gt; - New Line or start a new line by pressing enter"
+msgstr "Dozwolone tagi: &lt;b&gt; - pogrubienie, &lt;i&gt; - kursywa, &lt;u&gt; - podkreślenie, &lt;br&gt; - nowa linia lub przejdź do nowej linii używając enter"
+
+#: php/quiz-settings-tab-content.php:106
+msgid "Certificates font family"
+msgstr "Rodzina krojów dla certyfikatu"
+
+#: php/quiz-settings-tab-content.php:93
+msgid "Click here"
+msgstr "Kliknij tutaj"
+
+#: php/variables.php:56
+msgid "Download Certificate"
+msgstr "Pobierz certyfikat"
+
+#: php/quiz-settings-tab-content.php:98
+msgid "Enable certificates for this quiz/survey?"
+msgstr "Włączyć certyfikaty dla tego quizu/ankiety?"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://quizandsurveymaster.com"
+msgstr "http://quizandsurveymaster.com"
+
+#: php/quiz-settings-tab-content.php:108
+msgid "Please add font file (ttf) attachment ID or file path."
+msgstr "Proszę dodać identyfikator załącznika dla plik kroju (ttf) lub ścieżkę do pliku."
+
+#. Name of the plugin
+msgid "QSM - Certificate"
+msgstr "QSM - Certyfikat"
+
+#. Author of the plugin
+msgid "QSM Team"
+msgstr "QSM Team"
+
+#: php/quiz-settings-tab-content.php:95 php/quiz-settings-tab-content.php:160
+msgid "Save Settings"
+msgstr "Zapisz"
+
+#: php/quiz-settings-tab-content.php:117
+msgid "Title"
+msgstr "Tytuł"
+
+#: php/quiz-settings-tab-content.php:93
+msgid "to learn about adding custom fonts."
+msgstr "aby dowiedzieć się więcej o dodawaniu własnych krojów."
+
+#: php/quiz-settings-tab-content.php:153
+msgid "URL To Background Img (Must be JPG, JPEG, PNG, GIF or SVG)"
+msgstr "URL obrazu tła (JPG, JPEG, PNG, GIF or SVG)"
+
+#: php/quiz-settings-tab-content.php:146
+msgid "URL To Logo (Must be JPG, JPEG, PNG, GIF or SVG)"
+msgstr "URL logo (Must be JPG, JPEG, PNG, GIF or SVG)"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "No"
+msgstr "Nie"
+
+msgid "Your certificate settings has been saved successfully!"
+msgstr "Ustawienia certyfikatu zostały zapisane!"
+
+msgid "Certificate"
+msgstr "Certyfikat"
+
+msgid "Content"
+msgstr "Treść"
