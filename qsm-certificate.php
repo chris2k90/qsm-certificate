@@ -6,6 +6,8 @@
  * Author: QSM Team
  * Author URI: http://quizandsurveymaster.com
  * Version: 1.0.8
+ * Text Domain: qsm-certificate
+ * Domain Path: /lang
  *
  * @author
  * @version 1.0.8
@@ -179,4 +181,16 @@ add_action( 'plugins_loaded', 'qsm_addon_qsm_certificate_load' );
 function qsm_addon_qsm_certificate_missing_qsm() {
   echo '<div class="error"><p>QSM - Certificate requires Quiz And Survey Master. Please install and activate the Quiz And Survey Master plugin.</p></div>';
 }
+
+/**
+ * Loads plugin textdomain
+ * 
+ * @since 1.0.9
+ * @return void
+ */
+function qsm_addon_qsm_certificate_load_plugin_textdomain() {
+  load_plugin_textdomain( 'qsm-certificate', FALSE, basename( dirname( __FILE__ ) ) . '/lang/' );
+}
+
+add_action( 'plugins_loaded', 'qsm_addon_qsm_certificate_load_plugin_textdomain' );
 ?>
