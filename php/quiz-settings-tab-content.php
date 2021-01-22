@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function qsm_addon_certificate_register_quiz_settings_tabs() {
   global $mlwQuizMasterNext;
   if ( ! is_null( $mlwQuizMasterNext ) && ! is_null( $mlwQuizMasterNext->pluginHelper ) && method_exists( $mlwQuizMasterNext->pluginHelper, 'register_quiz_settings_tabs' ) ) {
-    $mlwQuizMasterNext->pluginHelper->register_quiz_settings_tabs( "Certificate", 'qsm_addon_certificate_quiz_settings_tabs_content' );
+    $mlwQuizMasterNext->pluginHelper->register_quiz_settings_tabs( __('Certificate', 'qsm-certificate'), 'qsm_addon_certificate_quiz_settings_tabs_content' );
   }
 }
 
@@ -58,7 +58,7 @@ function qsm_addon_certificate_quiz_settings_tabs_content() {
 
     // Saves array as QSM setting and alerts the user
     $mlwQuizMasterNext->pluginHelper->update_quiz_setting( "certificate_settings", $certificate_settings );
-    $mlwQuizMasterNext->alertManager->newAlert( 'Your certificate settings has been saved successfully!', 'success' );
+    $mlwQuizMasterNext->alertManager->newAlert( __('Your certificate settings has been saved successfully!', 'qsm-certificate'), 'success' );
   }
 
   // Load the settings
@@ -88,24 +88,24 @@ function qsm_addon_certificate_quiz_settings_tabs_content() {
   $certificate_settings = wp_parse_args( $certificate_settings, $certificate_defaults );
 
 	?>
-  <h2>Certificate</h2>
-  <p><b><?php echo __('After enabling and configuring your certificate, you will have to add it to an email on the Emails tab or a results page on the Results Page tab using the %CERTIFICATE_LINK% variable.'); ?></b></p>
-  <p><a href="https://quizandsurveymaster.com/docs/v7/adding-custom-font-to-certificate-addon/" target="_blank"><?php echo __('Click here') ?></a> <?php echo __('to learn about adding custom fonts.'); ?></p>
+  <h2><?php _e('Certificate', 'qsm-certificate') ?></h2>
+  <p><b><?php _e('After enabling and configuring your certificate, you will have to add it to an email on the Emails tab or a results page on the Results Page tab using the %CERTIFICATE_LINK% variable.', 'qsm-certificate'); ?></b></p>
+  <p><a href="https://quizandsurveymaster.com/docs/v7/adding-custom-font-to-certificate-addon/" target="_blank"><?php _e('Click here', 'qsm-certificate') ?></a> <?php _e('to learn about adding custom fonts.', 'qsm-certificate'); ?></p>
   <form action="" method="post">
-    <button class="button-primary"><?php echo __('Save Settings'); ?></button>
+    <button class="button-primary"><?php _e('Save Settings', 'qsm-certificate'); ?></button>
 		<table class="form-table">
 			<tr valign="top">
-				<td><label for="enableCertificates"><?php echo __('Enable certificates for this quiz/survey?'); ?></label></td>
+				<td><label for="enableCertificates"><?php _e('Enable certificates for this quiz/survey?', 'qsm-certificate'); ?></label></td>
 				<td>
-				    <input type="radio" id="radio30" name="enableCertificates" <?php checked( $certificate_settings["enabled"], '0' ); ?> value='0' /><label for="radio30">Yes</label><br>
-				    <input type="radio" id="radio31" name="enableCertificates" <?php checked( $certificate_settings["enabled"], '1' ); ?> value='1' /><label for="radio31">No</label><br>
+				    <input type="radio" id="radio30" name="enableCertificates" <?php checked( $certificate_settings["enabled"], '0' ); ?> value='0' /><label for="radio30"><?php _e('Yes', 'qsm-certificate'); ?></label><br>
+				    <input type="radio" id="radio31" name="enableCertificates" <?php checked( $certificate_settings["enabled"], '1' ); ?> value='1' /><label for="radio31"><?php _e('No', 'qsm-certificate'); ?></label><br>
 				</td>
 			</tr>
       <tr valign="top">
 				<td>
-          <label for="enableCertificates"><strong><?php echo __('Certificates font family'); ?></strong></label>
+          <label for="enableCertificates"><strong><?php _e('Certificates font family', 'qsm-certificate'); ?></strong></label>
           <p>
-            <?php echo __('Please add font file (ttf) attachment ID or file path.') ?>
+            <?php _e('Please add font file (ttf) attachment ID or file path.', 'qsm-certificate') ?>
           </p>
         </td>
 				<td>
@@ -114,14 +114,14 @@ function qsm_addon_certificate_quiz_settings_tabs_content() {
 			</tr>
 			<tr>
 				<td width="30%">
-					<strong><?php echo __('Title'); ?></strong>
+					<strong><?php _e('Title', 'qsm-certificate'); ?></strong>
 				</td>
                                 <td><textarea cols="80" rows="15" id="certificate_title" name="certificate_title"><?php echo stripslashes( $certificate_settings["title"] ); ?></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td width="30%">
-					<strong>Content</strong>
+					<strong><?php _e('Content', 'qsm-certificate'); ?></strong>
 					<br />
 					<p><?php _e('Allowed Variables:', 'quiz-master-next'); ?></p>
 					<p style="margin: 2px 0">- %POINT_SCORE%</p>
@@ -138,26 +138,26 @@ function qsm_addon_certificate_quiz_settings_tabs_content() {
 					<p style="margin: 2px 0">- %CURRENT_DATE%</p>
 					<p style="margin: 2px 0">- %DATE_TAKEN%</p>
 				</td>
-				<td><label for="certificate_template"><?php echo __('Allowed tags'); ?>: &lt;b&gt; - bold, &lt;i&gt;-italics, &lt;u&gt;-underline, &lt;br&gt;-<?php echo __('New Line or start a new line by pressing enter') ?></label><textarea cols="80" rows="15" id="certificate_template" name="certificate_template"><?php echo $certificate_settings["content"]; ?></textarea>
+				<td><label for="certificate_template"><?php _e('Allowed tags: &lt;b&gt; - bold, &lt;i&gt; - italics, &lt;u&gt; - underline, &lt;br&gt; - New Line or start a new line by pressing enter', 'qsm-certificate') ?></label><textarea cols="80" rows="15" id="certificate_template" name="certificate_template"><?php echo $certificate_settings["content"]; ?></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td width="30%">
-					<strong><?php echo __('URL To Logo (Must be JPG, JPEG, PNG, GIF or SVG)'); ?></strong>
+					<strong><?php _e('URL To Logo (Must be JPG, JPEG, PNG, GIF or SVG)', 'qsm-certificate'); ?></strong>
 				</td>
 				<td><textarea cols="80" rows="15" id="certificate_logo" name="certificate_logo"><?php echo $certificate_settings["logo"]; ?></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td width="30%">
-					<strong><?php echo __('URL To Background Img (Must be JPG, JPEG, PNG, GIF or SVG)'); ?></strong>
+					<strong><?php _e('URL To Background Img (Must be JPG, JPEG, PNG, GIF or SVG)', 'qsm-certificate'); ?></strong>
 				</td>
 				<td><textarea cols="80" rows="15" id="certificate_background" name="certificate_background"><?php echo $certificate_settings["background"]; ?></textarea>
 				</td>
 			</tr>
 		</table>
     <?php wp_nonce_field('certificate','certificate_nonce'); ?>
-		<button class="button-primary"><?php echo __('Save Settings'); ?></button>
+		<button class="button-primary"><?php _e('Save Settings', 'qsm-certificate'); ?></button>
 	</form>
   <?php
 }

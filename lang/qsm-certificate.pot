@@ -1,0 +1,97 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QSM - Certificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-22 09:24+0000\n"
+"PO-Revision-Date: 2021-01-22 09:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description of the plugin
+msgid "Adds the ability to give certificates to quiz/survey takers"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:92
+msgid ""
+"After enabling and configuring your certificate, you will have to add it to "
+"an email on the Emails tab or a results page on the Results Page tab using "
+"the %CERTIFICATE_LINK% variable."
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:141
+msgid "Allowed tags: &lt;b&gt; - bold, &lt;i&gt; - italics, &lt;u&gt; - underline, &lt;br&gt; - New Line or start a new line by pressing enter"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:106
+msgid "Certificates font family"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:93
+msgid "Click here"
+msgstr ""
+
+#: php/variables.php:56
+msgid "Download Certificate"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:98
+msgid "Enable certificates for this quiz/survey?"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://quizandsurveymaster.com"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:108
+msgid "Please add font file (ttf) attachment ID or file path."
+msgstr ""
+
+#. Name of the plugin
+msgid "QSM - Certificate"
+msgstr ""
+
+#. Author of the plugin
+msgid "QSM Team"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:95 php/quiz-settings-tab-content.php:160
+msgid "Save Settings"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:117
+msgid "Title"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:93
+msgid "to learn about adding custom fonts."
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:153
+msgid "URL To Background Img (Must be JPG, JPEG, PNG, GIF or SVG)"
+msgstr ""
+
+#: php/quiz-settings-tab-content.php:146
+msgid "URL To Logo (Must be JPG, JPEG, PNG, GIF or SVG)"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Your certificate settings has been saved successfully!"
+msgstr ""
+
+msgid "Certificate"
+msgstr ""
+
+msgid "Content"
+msgstr ""
